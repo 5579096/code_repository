@@ -57,13 +57,28 @@ def register_for_event(event_id, attendee_name):
 
 # Function to collect feedback for an event
 def collect_feedback(event_id, attendee_name, feedback):
-    # Create a sub-dictionary for the event if it doesn't exist
+    # Check if the event exists in the database
+    if event_id not in events_db:
+        print("Event ID does not exist.")
+        print("---------------------------------------")
+        return
+    
+    # Check if the attendee is registered for the event
+    if attendee_name not in events_db[event_id]["attendees"]:
+        print(f"This customer ({attendee_name}) is not registered for the event and cannot leave feedback.")
+        print("---------------------------------------")
+        return
+
+    # Check if a sub-dictionary for the event exists in the feedback database; if not, create it
     if event_id not in attendees_db:
         attendees_db[event_id] = {}
+    
     # Store the feedback
     attendees_db[event_id][attendee_name] = feedback
     print("Feedback received. Thank you!")
     print("---------------------------------------")
+
+    
 
 # Function to update loyalty points for an attendee
 def update_loyalty_points(attendee_name):
