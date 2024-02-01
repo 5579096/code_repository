@@ -26,7 +26,7 @@
 
 ## *!!!After the test, some of these functions need to be enhanced* ##
 
-### collect_feedback (edited 01/02/2024)
+### collect_feedback (edited 01/02/2024 merged to main)
 	- Add event existence check
   	- Attendee Registration Check
    *Create a new branch to modify ‘collect_feedback’ function.*
