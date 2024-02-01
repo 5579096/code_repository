@@ -1,6 +1,6 @@
 # Global databases for storing event data
 
-import datetime
+from datetime import datetime
 
 events_db = {}  # Stores event details
 attendees_db = {}  # Stores feedback for each event
@@ -32,6 +32,19 @@ def create_event(event_id, name, speaker, date, capacity):
     print("Event created successfully.")
     print("---------------------------------------")
     return True
+
+
+def get_valid_date_input():
+    """Prompts the user for a date until the correct format is entered."""
+    while True:
+        date_input = input("Enter event date (YYYY-MM-DD): ")
+        try:
+            # Attempt to parse the date to validate its format
+            valid_date = datetime.strptime(date_input, "%Y-%m-%d")
+            return date_input  # Return the validated date string
+        except ValueError:
+            print("Invalid date format. Please use YYYY-MM-DD.")
+
 
 # Function to modify an existing event
 def modify_event(event_id, **kwargs):
@@ -167,7 +180,7 @@ def run_event_management_system():
             event_id = input("Enter event ID: ")
             name = input("Enter event name: ")
             speaker = input("Enter speaker name: ")
-            date = input("Enter event date (YYYY-MM-DD): ")
+            date = get_valid_date_input()  # Use the new function to get a valid date input
             capacity = input("Enter event capacity: ")
             try:
                 capacity = int(capacity)
