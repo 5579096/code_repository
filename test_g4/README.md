@@ -37,5 +37,10 @@
 ### Date and time 
 	- At first, just allows the user to input a number that has a pattern in the placeholder (Enter event date (YYYY-MM-DD):)
  	- Need date format validation
+*Date Validation:*
 
-       
+The try block attempts to convert the date string into a datetime object using the format "%Y-%m-%d" (which corresponds to "YYYY-MM-DD"). 
+If this conversion fails, a ValueError is raised, and the except block is executed, printing an error message and returning False to indicate the event creation was unsuccessful due to invalid date format.
+
+Successful Event Creation: If the date format is valid and the event ID does not already exist in the system, the event details are added to events_db, and a success message is printed.
+
