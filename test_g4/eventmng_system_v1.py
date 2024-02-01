@@ -1,5 +1,7 @@
 # Global databases for storing event data
 
+import datetime
+
 events_db = {}  # Stores event details
 attendees_db = {}  # Stores feedback for each event
 loyalty_points_db = {} # Stores loyalty points for each attendee
@@ -10,11 +12,20 @@ def create_event(event_id, name, speaker, date, capacity):
     if event_id in events_db:
         print("Event ID already exists.")
         return False
+
+    # Validate date format (YYYY-MM-DD)
+    try:
+        valid_date = datetime.strptime(date, "%Y-%m-%d")
+    except ValueError:
+        print("Invalid date format. Please use YYYY-MM-DD.")
+        return False
+
+
     # Add new event to the database
     events_db[event_id] = {
         "name": name,
         "speaker": speaker,
-        "date": date,
+        "date": date, # Use the original date string as it's now validated
         "capacity": capacity,
         "attendees": []
     }
