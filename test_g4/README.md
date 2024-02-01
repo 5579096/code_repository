@@ -7,7 +7,7 @@
   	- Attendee Registration Check
    	
 ### Date and time 
-     	- At first, just allows the user to input a number that has a pattern in the placeholder (Enter event date (YYYY-MM-DD):)
-      	- Need date format validation
+	- At first, just allows the user to input a number that has a pattern in the placeholder (Enter event date (YYYY-MM-DD):)
+ 	- Need date format validation
 
        
