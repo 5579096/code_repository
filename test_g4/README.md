@@ -1,8 +1,4 @@
-#Project 5: E-Business Event Management System
-
-
-
-Heading	# H1
+# Project 5: E-Business Event Management System
 ## H2
 ### H3
 Bold	**bold text**
