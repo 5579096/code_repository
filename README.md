@@ -23,7 +23,7 @@
   
 # ***Week 2***
   ### :blue_book: HTML and CSS
-  ### :gem: Git Hub - Version control software
+  ### :gem: GitHub - Version control software//save your progrress - Git is a memory card for code.
 
   ## :round_pushpin: useful link
   - [Jordan's GitHub](https://www.example.com](https://github.com/Jordan-Bruno/DDP2324-GitHubExercise)https://github.com/Jordan-Bruno/DDP2324-GitHubExercise)
