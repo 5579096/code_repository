@@ -67,7 +67,7 @@
 
 # Project 5: E-Business Event Management System
 
-## What's the first version have
+## What are the first version had
 
 ### Create Event
 
