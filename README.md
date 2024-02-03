@@ -42,6 +42,8 @@
 - [Bootstrap Theme](https://themes.getbootstrap.com/)
 - [Bulma Responsive UI](https://bulma.io/alternative-to-bootstrap/)
 - [HTML - W3 School](https://www.w3schools.com/html/html5_semantic_elements.asp)
+- [How to connect VSCode to GitHub](https://code.visualstudio.com/docs/sourcecontrol/github)
+- [Username config on VSCode](https://www.youtube.com/watch?v=c-arYUBnHhk)
 
 # **_Week 3_**
 
