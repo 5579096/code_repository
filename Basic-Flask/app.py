@@ -3,12 +3,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    data = {"Name": "Warisara", "Age" : 30, "Job" : "Student"}
+    data = {"Name": "Warisara", "Age" : 30, "Job" : "Student", "Gender" : "Female"}
     return render_template("index.html", mydata = data)
 
 @app.route('/about')
 def about():
-    return render_template("about.html")
+    product =["Apple", "Banana", "Orange", "Grape"]
+    return render_template("about.html", myproduct = product)
 
 @app.route('/admin')
 def profile():
