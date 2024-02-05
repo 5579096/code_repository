@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, Request
 app = Flask(__name__)
 
 @app.route('/')
@@ -17,6 +17,11 @@ def profile():
     age = 23
     return render_template("admin.html", username = name)
 
+@app.route('/sendData')
+def signupForm():
+    fname = Request.args.get('fname')
+    description = Request.args.get('description')
+    return render_template("thankyou.html", data = {"fname": fname, "description": description})
 
 #debug mode is true, to show error message
 if __name__ == "__main__":
