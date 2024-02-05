@@ -8,7 +8,16 @@
 <body>
     <h1>Welcome to Admin Page</h1>
     <!-- Jinja syntax -->
+    <!-- 
     <h1>Hello! {{myname}}</h1>
-    <h2>You are {{age}} years old</h2>
+    <h2>You are {{age}} years old</h2>-->
+
+    <!-- Jinja if statement -->
+    {% if username == "Bhum" %}
+        <h1>Hello Gorgeous</h1>
+    {% else %}
+        <h1>You aure not admin</h1>
+        <a href="/">Back to Home Page</a>
+    {% endif %}
 </body>
 </html>

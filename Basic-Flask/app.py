@@ -3,7 +3,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    data = {"Name": "Warisara", "Age" : 30, "Job" : "Student"}
+    return render_template("index.html", mydata = data)
 
 @app.route('/about')
 def about():
@@ -11,9 +12,9 @@ def about():
 
 @app.route('/admin')
 def profile():
-    name = "Warisara"
+    name = "Bhum"
     age = 23
-    return render_template("admin.html", myname = name, age = age)
+    return render_template("admin.html", username = name)
 
 
 #debug mode is true, to show error message
