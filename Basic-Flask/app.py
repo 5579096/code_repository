@@ -11,7 +11,9 @@ def about():
 
 @app.route('/admin')
 def profile():
-    return render_template("admin.html")
+    name = "Warisara"
+    age = 23
+    return render_template("admin.html", myname = name, age = age)
 
 
 #debug mode is true, to show error message
