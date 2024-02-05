@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Request
+from flask import Flask, render_template,request
 app = Flask(__name__)
 
 @app.route('/')
@@ -18,9 +18,9 @@ def profile():
     return render_template("admin.html", username = name)
 
 @app.route('/sendData')
-def signupForm():
-    fname = Request.args.get('fname')
-    description = Request.args.get('description')
+def signupform():
+    fname = request.args.get("fname")
+    description = request.args.get("description")
     return render_template("thankyou.html", data = {"fname": fname, "description": description})
 
 #debug mode is true, to show error message
